@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 	attr_accessible :description, :image_url, :price, :title
 
-	validates :title, :description, :image_url, presence: true, :length => {
+	validates :title, :description,:image_url,  presence: true, :length => {
 		:minimum => 10,
 		:message => 'must be at least ten characters long'
 	}
